@@ -1,19 +1,23 @@
 :root {
   --purple: #6070ff;
+  --mainFont: 'Poppins'
 }
 
 html {
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: var(--mainFont);
   font-size: 62.5%;
 }
 
-html, body {
+html, 
+body {
   padding: 0;
   margin: 0;
 }
 
-*, *::before, *::after {
+*, 
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -25,14 +29,16 @@ header {
   margin: 0 auto;
 }
 
-header p, span {
+header p,
+span {
   font-size: 2rem;
-  color:  var(--purple);
+  color: var(--purple);
 }
 
 header p {
   font-weight: 700;
 }
+
 /* Hero */
 
 .hero {
