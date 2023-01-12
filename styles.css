@@ -1,6 +1,6 @@
 :root {
   --purple: #6070ff;
-  --mainFont: 'Poppins'
+  --mainFont: 'Poppins';
 }
 
 html {
@@ -9,13 +9,13 @@ html {
   font-size: 62.5%;
 }
 
-html, 
+html,
 body {
   padding: 0;
   margin: 0;
 }
 
-*, 
+*,
 *::before,
 *::after {
   box-sizing: inherit;
