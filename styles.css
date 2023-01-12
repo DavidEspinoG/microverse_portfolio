@@ -1,12 +1,17 @@
 :root {
   --purple: #6070ff;
   --mainFont: 'Poppins';
+  --black: #172b4d;
 }
 
 html {
   box-sizing: border-box;
   font-family: var(--mainFont);
   font-size: 62.5%;
+}
+
+img { 
+  max-width: 100%;
 }
 
 html,
@@ -59,7 +64,7 @@ header p {
 }
 
 .hero-text p {
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 30px;
   font-weight: 300;
   margin-top: 5px;
@@ -95,4 +100,80 @@ a {
 
 .social-media li img {
   height: 25px;
+}
+
+.cards-container { 
+  background-color: #e5e5e5;
+  padding: 11rem 1.5rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12rem;
+  
+}
+
+.card {
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #DFE1E6;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card h2 {
+  color: var(--black);
+  font-size: 3.2rem;
+  margin: 1rem 0;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.tags img {
+  width: 6px;
+}
+
+.tags p {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.tags span {
+  color: #7A869A;
+}
+
+.description {
+  color: #344563;
+  font-size: 1.6rem;
+}
+
+.technologies {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.technologies li {
+  background-color: #EBEBFF;
+  padding: .8rem;
+  color: #6070FF;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.card button {
+  color: #396DF2;
+  border: 2px solid #396DF2;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  flex: none;
 }
