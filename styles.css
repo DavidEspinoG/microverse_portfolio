@@ -1,0 +1,98 @@
+:root {
+  --purple: #6070ff;
+  --mainFont: 'Poppins';
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--mainFont);
+  font-size: 62.5%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+header p,
+nav {
+  font-size: 2rem;
+  color: var(--purple);
+}
+
+header p {
+  font-weight: 700;
+}
+
+/* Hero */
+
+.hero {
+  background-image: url('./img/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 57.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5px;
+}
+
+.hero-text p {
+  font-size: 2rem;
+  line-height: 30px;
+  font-weight: 300;
+  margin-top: 5px;
+  color: #344563;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  text-align: left;
+  color: #172b4d;
+}
+
+.hero-text span {
+  color: var(--purple);
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
+.social-media {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.social-media li img {
+  height: 25px;
+}
