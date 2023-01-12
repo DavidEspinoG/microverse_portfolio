@@ -30,7 +30,7 @@ header {
 }
 
 header p,
-span {
+nav {
   font-size: 2rem;
   color: var(--purple);
 }
@@ -58,11 +58,12 @@ header p {
   margin-bottom: 0.5px;
 }
 
-.hero p {
+.hero-text p {
   font-size: 2rem;
   line-height: 30px;
   font-weight: 300;
   margin-top: 5px;
+  color: #344563;
 }
 
 .container {
@@ -72,8 +73,26 @@ header p {
 
 .hero-text h1 {
   text-align: left;
+  color: #172b4d;
 }
 
 .hero-text span {
   color: var(--purple);
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
+.social-media {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.social-media li img{ 
+  height: 25px;
 }

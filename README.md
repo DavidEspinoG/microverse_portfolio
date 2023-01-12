@@ -60,7 +60,7 @@ Portfolio is a web page build for showing my experience as a software developer
 
 ## 📝 License <a id="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
