@@ -242,3 +242,10 @@ a {
   padding-left: 0;
   list-style: none;
 }
+
+.form-container {
+  background-color: #6070FF;
+  height: 50rem;
+  padding-top: 11rem;
+  border-radius: 8rem 0 0 0 ;
+}
