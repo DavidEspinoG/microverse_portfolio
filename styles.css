@@ -80,7 +80,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 0 0 0 8rem ;
+  border-radius: 0 0 0 8rem;
 }
 
 .hero h1 {
@@ -375,14 +375,13 @@ button:hover {
     display: inline;
   }
 
-  .desktop-navigation ul{
+  .desktop-navigation ul {
     display: flex;
     gap: 2rem;
   }
 
-  .desktop-navigation ul li{
+  .desktop-navigation ul li {
     list-style: none;
-    
   }
 
   .nav-link {
