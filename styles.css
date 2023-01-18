@@ -355,11 +355,11 @@ textarea {
 .primary-button:hover {
   cursor: pointer;
   color: #fff;
-  background-color: #6070FF;
+  background-color: #6070ff;
 }
 
 .primary-button:active {
-  background: #2230D2;
+  background: #2230d2;
 }
 
 .secondary-button:hover {
@@ -439,6 +439,7 @@ textarea {
   .form-container__form {
     align-items: center;
   }
+
   .form-container__form input,
   textarea {
     width: 380px;
