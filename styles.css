@@ -34,9 +34,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
+  width: 90%;
   max-width: 85%;
-  margin: 0 7rem;
+  margin: 0 auto;
 }
 
 header p,
@@ -127,14 +127,6 @@ a {
 .social-media li img {
   height: 25px;
 }
-
-/* .cards-container {
-  background-color: #e5e5e5;
-  padding: 11rem 1.5rem;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 12rem;
-} */
 
 .cards-container {
   background-color: #e5e5e5;
@@ -322,7 +314,7 @@ a {
 
 .form-container__form input,
 textarea {
-  border-radius: 1rem;
+  border-radius: 2px;
   padding: 1rem;
 }
 
@@ -360,12 +352,22 @@ textarea {
   border: 0;
 }
 
-button:hover {
+.primary-button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #6070FF;
+}
+
+.primary-button:active {
+  background: #2230D2;
+}
+
+.secondary-button:hover {
+  background: rgb(246, 242, 242);
   cursor: pointer;
 }
 
 /* Desktop version */
-
 @media (min-width: 768px) {
   .burger-icon {
     display: none;
@@ -397,6 +399,14 @@ button:hover {
     padding: 0 11rem;
   }
 
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
   .desktop-about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -424,6 +434,14 @@ button:hover {
   .form-container__content {
     max-width: 60%;
     margin: 0 auto;
+  }
+
+  .form-container__form {
+    align-items: center;
+  }
+  .form-container__form input,
+  textarea {
+    width: 380px;
   }
 }
 
