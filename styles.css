@@ -389,6 +389,11 @@ textarea {
   .nav-link {
     color: #344563;
     font-size: 1.5rem;
+    transition: rotate 1s;
+  }
+
+  .nav-link:hover {
+    rotate: 10deg;
   }
 
   .hero {
@@ -452,3 +457,5 @@ textarea {
     margin: 0 auto;
   }
 }
+
+
