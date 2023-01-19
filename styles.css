@@ -199,12 +199,18 @@ a {
   gap: 1rem;
 }
 
-.technologies li {
+.technologies__li {
   background-color: #ebebff;
   padding: 0.8rem;
   color: #6070ff;
   border-radius: 8px;
   font-size: 1.2rem;
+  transition: background-color 2s;
+}
+
+.technologies__li:hover {
+  background-color: #6070ff;
+  color: #fff;
 }
 
 .card button {
