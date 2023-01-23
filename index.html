@@ -14,15 +14,13 @@
 <body>
     <header>
         <p><a href="#">My logo</a></p>
-        <nav class="burger-icon">
+        <nav role="navigation" class="burger-icon">
             <i class="fa-solid fa-bars"></i>
         </nav>
         <nav class="desktop-navigation">
-            <ul>
-                <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
-                <li class="nav-link"><a href="#about">About</a></li>
-                <li class="nav-link"><a href="#contact">Contact</a></li>
-            </ul>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
         </nav>
     </header>
     <div class="hero-background">
@@ -48,7 +46,7 @@
     
     <section class="cards-container" id="portfolio">
         <div class="card">
-            <img class="card-image" src="./img/portfolio1.jpg" alt="webpage image">
+            <img class="card-image" src="./img/portfolio1.jpg" alt="Image showing a web page created by me">
             <div>
                 <h2>Tonic</h2>
                 <div class="tags">
@@ -73,7 +71,7 @@
             </div>
         </div>
         <div class="card">
-            <img class="card-image" src="./img/portfolio2.jpg" alt="webpage image">
+            <img class="card-image" src="./img/portfolio2.jpg" alt="Image showing a web page created by me">
             <div>
                 <h2>Tonic</h2>
                 <div class="tags">
@@ -98,7 +96,7 @@
             </div>
         </div>
         <div class="card">
-            <img class="card-image" src="./img/portfolio3.jpg" alt="webpage image">
+            <img class="card-image" src="./img/portfolio3.jpg" alt="Image showing a web page created by me">
             <div>
                 <h2>Tonic</h2>
                 <div class="tags">
@@ -150,15 +148,15 @@
                     </div>
                     <ul class="languages-li">
                         <li class="language">
-                            <img class="language-img" src="./img/js.png" alt="JavaScript image">
+                            <img class="language-img" src="./img/js.png" alt="JavaScript Logo">
                             <p>JavaScript</p>
                         </li>
                         <li class="language">
-                            <img class="language-img" src="./img/html.jpg" alt="JavaScript image">
+                            <img class="language-img" src="./img/html.jpg" alt="HTML Logo">
                             <p>HTML</p>
                         </li>
                         <li class="language">
-                            <img class="language-img" src="./img/css.jpg" alt="JavaScript image">
+                            <img class="language-img" src="./img/css.jpg" alt="CSS image">
                             <p>CSS</p>
                         </li>
                     </ul>
@@ -168,7 +166,7 @@
         </div>
     </section>
     <section class="form-container" id="contact">
-        <img class="form-container__img" src="./img/contact-background.svg">
+        <img class="form-container__img" alt="Not relevant decoration image" src="./img/contact-background.svg">
         <div class="form-container__content">
             <h2>Contact me</h2>
             <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
@@ -177,7 +175,7 @@
             method="POST"
             class="form-container__form"
             >
-                <input maxlength="30" placeholder="Your name: " type="text" name="name" class="input" required>
+                <input id="name" maxlength="30" placeholder="Your name: " type="text" name="name" class="input" required>
                 <input placeholder="Your email: " type="email" name="email" class="input" required>
                 <textarea maxlength="500" placeholder="Your message" name="message" required></textarea>
                 <button class="secondary-button" type="submit">Get in touch</button>

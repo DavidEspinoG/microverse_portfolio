@@ -180,11 +180,13 @@ a {
 
 .tags p {
   color: var(--black);
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .tags span {
   color: #7a869a;
+  font-size: 1.2rem;
 }
 
 .description {
@@ -437,6 +439,10 @@ textarea {
     margin-top: 0;
   }
 
+  .tags p,
+  span {
+    font-size: 1.8rem;
+  }
   .languages h3 {
     margin-top: 0;
   }
