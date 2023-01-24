@@ -69,7 +69,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link(deploy pending)](https://yourdeployedapplicationlink.com)
+- [Live Demo Link(deploy pending)](https://davidespinog.github.io/portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
