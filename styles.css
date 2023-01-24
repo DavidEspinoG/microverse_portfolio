@@ -90,7 +90,7 @@ textarea {
 }
 
 .hero-text p {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 30px;
   font-weight: 300;
   margin-top: 5px;
@@ -109,7 +109,7 @@ textarea {
 
 .hero-text span {
   color: var(--purple);
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 a {
@@ -412,7 +412,7 @@ textarea {
 
   .nav-link {
     color: #344563;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition: rotate 1s;
   }
 
