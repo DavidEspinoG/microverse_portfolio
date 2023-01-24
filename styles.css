@@ -157,9 +157,16 @@ a {
   border: 1px solid #dfe1e6;
 }
 
+.card-image-background {
+  padding: 4.5rem;
+  border-radius: 2rem;
+  background-color: rgb(237, 129, 51);
+}
+
 .card-image {
   width: 90rem;
   max-width: 100%;
+  border-radius: 10px;
 }
 
 .card h2 {
@@ -180,11 +187,13 @@ a {
 
 .tags p {
   color: var(--black);
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .tags span {
   color: #7a869a;
+  font-size: 1.2rem;
 }
 
 .description {
@@ -435,6 +444,11 @@ textarea {
 
   .languages {
     margin-top: 0;
+  }
+
+  .tags p,
+  span {
+    font-size: 1.8rem;
   }
 
   .languages h3 {
