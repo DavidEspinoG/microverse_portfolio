@@ -12,10 +12,22 @@
     <title>David's Portfolio</title>
 </head>
 <body>
+    <div class="modal display-none" id="modal">
+        <div class="modal__exit-button container" >
+            <i class="fa-solid fa-xmark fa-2xl" id="exit-button"></i>
+        </div>
+        <nav class="modal__navigation">
+            <ul class="container">
+                <li class="modal__navigation__li"><a href="#portfolio">portfolio</a></li>
+                <li class="modal__navigation__li"><a href="#about">about</a></li>
+                <li class="modal__navigation__li"><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <p><a href="#">My logo</a></p>
         <nav role="navigation" class="burger-icon">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" id="burger-menu"></i>
         </nav>
         <nav class="desktop-navigation">
             <ul>
@@ -25,7 +37,7 @@
             </ul>
         </nav>
     </header>
-    <div class="hero-background">
+    <div class="hero-background" id="hero">
         <section class="hero">
             <div class="container hero-text">
                 <h1>I'm David,<br> Glad to see you</h1>
@@ -184,5 +196,6 @@
             </form>
         </div>    
     </section>
+    <script src="./index.js"></script>
 </body>
 </html>
