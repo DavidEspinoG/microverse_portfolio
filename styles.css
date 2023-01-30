@@ -493,13 +493,14 @@ textarea {
   }
 }
 
+/* Modal */
+
 .modal {
   background-color: rgba(96, 112, 255, .9);
   height: 100vh;
   position: absolute;
-  z-index: 10;
+  z-index: 4;
   width: 100%;
-  
 }
 
 .modal__navigation ul {
