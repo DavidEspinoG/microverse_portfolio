@@ -3,7 +3,7 @@ const modal = document.getElementById('modal');
 const body = document.querySelector('body');
 const exitBtn = document.getElementById('exit-button');
 const modalLnks = document.querySelectorAll('.modal__navigation__li');
-
+console.log(modalLnks);
 menu.addEventListener('click', (event) => {
     event.stopPropagation();
     console.log('it works');
@@ -17,8 +17,12 @@ exitBtn.addEventListener('click', (event) => {
     body.classList.remove('stop-scrolling');
 });
 
-modalLnks.addEventListener('click', (event) => {
-    event.stopPropagation();
-    modal.classList.add('display-none');
-    body.classList.remove('stop-scrolling');
-});
+
+
+for (let i = 0; i < modalLnks.length;i ++){
+    modalLnks[i].addEventListener('click', (event) => {
+        event.stopPropagation();
+        modal.classList.add('display-none');
+        body.classList.remove('stop-scrolling');
+        });
+}
