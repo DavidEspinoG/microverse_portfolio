@@ -4,6 +4,10 @@
   --black: #172b4d;
 }
 
+.blur {
+  filter: blur(0.5rem);
+}
+
 .display-none {
   display: none;
 }
