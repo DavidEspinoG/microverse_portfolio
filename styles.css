@@ -4,6 +4,10 @@
   --black: #172b4d;
 }
 
+.display-none {
+  display: none;
+}
+
 .fixed {
   position: fixed;
 }
