@@ -11,7 +11,19 @@
     <link rel="stylesheet" href="./styles.css">
     <title>David's Portfolio</title>
 </head>
-<body>
+<body class="stop-scrolling">
+    <div class="modal">
+        <div class="modal__exit-button container" id="exit-button">
+            <i class="fa-solid fa-xmark fa-2xl"></i>
+        </div>
+        <nav class="modal__navigation">
+            <ul class="container">
+                <li class="modal__navigation__li"><a href="#portfolio">portfolio</a></li>
+                <li class="modal__navigation__li"><a href="#about">about</a></li>
+                <li class="modal__navigation__li"><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <p><a href="#">My logo</a></p>
         <nav role="navigation" class="burger-icon">
@@ -184,5 +196,6 @@
             </form>
         </div>    
     </section>
+    <script src="./index.js"></script>
 </body>
 </html>
