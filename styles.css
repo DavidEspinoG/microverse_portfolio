@@ -500,7 +500,7 @@ textarea {
 /* Modal */
 
 .modal {
-  background-color: rgba(96, 112, 255, .9);
+  background-color: rgba(96, 112, 255, 0.9);
   height: 100vh;
   position: absolute;
   z-index: 4;
