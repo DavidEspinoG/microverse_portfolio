@@ -40,7 +40,7 @@ const portfolio = document.getElementById('portfolio');
 
 for(let i = 0; i < data.length; i++) {
   const div = document.createElement('div');
-  div.classList.add('card')
+  div.classList.add('card');
   const img = document.createElement('img');
   const contentDiv = document.createElement('div');
   const h2 = document.createElement('h2');
@@ -49,7 +49,32 @@ for(let i = 0; i < data.length; i++) {
   tagsDiv.classList.add('tags');
   const tag1 = document.createElement('p');
   const bullet = document.createElement('img');
-
+  const span1 = document.createElement('span');
+  const span2 = document.createElement('span');
+  // End of tags div
+  const pDscrptn = document.createElement('p');
+  pDscrptn.classList.add('description');
+  const technologies = document.createElement('ul');
+  technologies.classList('technologies');
+  const bttnDiv = document.createElement('div');
+  const bttnA = document.createElement('a');
+  const button = document.createElement('button');
+  button.classList.add('primary-button');
+  button.type = 'button';
+  button.innerText = 'See Project';
+  // Append child
+  div.appendChild(img);
+  div.appendChild(contentDiv);
+  contentDiv.appendChild(h2);
+  contentDiv.appendChild(tagsDiv);
+  tagsDiv.appendChild(tag1);
+  tagsDiv.appendChild(bullet);
+  tagsDiv.appendChild(span1);
+  tagsDiv.appendChild(bullet);
+  tagsDiv.appendChild(span2);
+  contentDiv.appendChild(pDscrptn);
+  contentDiv.appendChild(technologies);
+  contentDiv.appendChild(bttnDiv);
+  bttnDiv.appendChild(bttnA);
+  bttnA.appendChild(button);
 }
-
-
