@@ -55,13 +55,30 @@ for(let i = 0; i < data.length; i++) {
   const pDscrptn = document.createElement('p');
   pDscrptn.classList.add('description');
   const technologies = document.createElement('ul');
-  technologies.classList('technologies');
+  technologies.classList.add('technologies');
   const bttnDiv = document.createElement('div');
   const bttnA = document.createElement('a');
   const button = document.createElement('button');
   button.classList.add('primary-button');
   button.type = 'button';
   button.innerText = 'See Project';
+  //Add Content 
+  img.src = data[i].image;
+  img.alt = data[i].title + ' img';
+  h2.innerText = data[i].title;
+  tag1.innerText = data[i].tags[0];
+  bullet.src = './img/Counter.png';
+  span1.innerText = data[i].tags[1];
+  span2.innerText = data[i].tags[2];
+  pDscrptn.innerText = data[i].description;
+  // Technologies for loop 
+  for(let j = 0; j < data[i].technologies.length; j++ ){
+    const li = document.createElement('li');
+    li.classList.add('technologies__li');
+    li.innerText = data[i].technologies[j];
+    technologies.appendChild(li);
+  }
+  bttnA.href = data[i].link;
   // Append child
   div.appendChild(img);
   div.appendChild(contentDiv);
@@ -77,4 +94,5 @@ for(let i = 0; i < data.length; i++) {
   contentDiv.appendChild(bttnDiv);
   bttnDiv.appendChild(bttnA);
   bttnA.appendChild(button);
+  portfolio.appendChild(div);
 }
