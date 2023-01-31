@@ -1,3 +1,5 @@
+// Modal
+
 const menu = document.getElementById('burger-menu');
 const modal = document.getElementById('modal');
 const body = document.querySelector('body');
@@ -31,3 +33,23 @@ for (let i = 0; i < modalLnks.length; i += 1) {
     header.classList.remove('blur');
   });
 }
+
+// Portfolio 
+import data from './projectsData.js';
+const portfolio = document.getElementById('portfolio');
+
+for(let i = 0; i < data.length; i++) {
+  const div = document.createElement('div');
+  div.classList.add('card')
+  const img = document.createElement('img');
+  const contentDiv = document.createElement('div');
+  const h2 = document.createElement('h2');
+  //Tags div
+  const tagsDiv = document.createElement('div');
+  tagsDiv.classList.add('tags');
+  const tag1 = document.createElement('p');
+  const bullet = document.createElement('img');
+
+}
+
+
