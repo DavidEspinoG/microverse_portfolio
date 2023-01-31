@@ -1,5 +1,6 @@
 const data = [
   {
+    id: 1,
     title: 'Movie App',
     tags: ['Freelance', 'Front-end', '2022'],
     description: 'A project that uses MovieDB API for getting information about the most viewed movies of the last seven days.',
@@ -8,6 +9,7 @@ const data = [
     image: './img/portfolio1.jpg',
   },
   {
+    id: 2,
     title: 'Data example 1',
     tags: ['CANOPY', 'Back-End', '2015'],
     description: 'A daily selection of privately personalized reads. No accounts or sign-ups required.',
@@ -16,6 +18,7 @@ const data = [
     image: './img/portfolio2.jpg',
   },
   {
+    id: 3,
     title: 'Data example 2',
     tags: ['CANOPY', 'Back-End', '2015'],
     description: 'A daily selection of privately personalized reads. No accounts or sign-ups required.',

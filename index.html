@@ -12,18 +12,6 @@
     <title>David's Portfolio</title>
 </head>
 <body>
-    <div class="modal display-none" id="modal">
-        <div class="modal__exit-button container" >
-            <i class="fa-solid fa-xmark fa-2xl" id="exit-button"></i>
-        </div>
-        <nav class="modal__navigation">
-            <ul class="container">
-                <li class="modal__navigation__li"><a href="#portfolio">portfolio</a></li>
-                <li class="modal__navigation__li"><a href="#about">about</a></li>
-                <li class="modal__navigation__li"><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-    </div>
     <header>
         <p><a href="#">My logo</a></p>
         <nav role="navigation" class="burger-icon">
@@ -57,33 +45,10 @@
             </div>
         </section>
     </div>
+   
     
     <section class="cards-container" id="portfolio">
-        <!-- <div class="card">
-            <img class="card-image" src="./img/portfolio1.jpg" alt="Image showing a web page created by me">
-            <div>
-                <h2>Movie App</h2>
-                <div class="tags">
-                    <p>Freelance</p>
-                    <img class="bullet" src="./img/Counter.png" alt="bullet">
-                    <span>Front-end Dev</span>
-                    <img class="bullet" src="./img/Counter.png" alt="bullet">
-                    <span>2022</span>
-                </div>
-                <p class="description">
-                    A project that uses MovieDB API for getting information about 
-                    the most viewed movies of the last seven days. 
-                </p>
-                <ul class="technologies">
-                    <li class="technologies__li">React</li>
-                    <li class="technologies__li">API</li>
-                    <li class="technologies__li">JavaScript</li>
-                </ul>
-                <div>
-                    <a href="https://davidespinog.github.io/platzi_movies_react/"><button class="primary-button" type="button">See Project</button></a>
-                </div>    
-            </div>
-        </div> -->
+        
     </section>
     <section class="about" id="about">
         <div class="about-content">
@@ -146,6 +111,26 @@
             </form>
         </div>    
     </section>
+    </div>
+    <div class="modal display-none" id="modal">
+        <div class="modal__exit-button container" >
+            <i class="fa-solid fa-xmark fa-2xl" id="exit-button"></i>
+        </div>
+        <nav class="modal__navigation">
+            <ul class="container">
+                <li class="modal__navigation__li"><a href="#portfolio">portfolio</a></li>
+                <li class="modal__navigation__li"><a href="#about">about</a></li>
+                <li class="modal__navigation__li"><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- <div class="dark-background">
+
+    </div> -->
+    
+    <div class="projectDetail display-none" id="project-detail">
+
+    </div>
     <script src="./index.js" type="module"></script>
 </body>
 </html>

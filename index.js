@@ -34,9 +34,62 @@ for (let i = 0; i < modalLnks.length; i += 1) {
   });
 }
 
+function projectDetails(obj) {
+  // body.classList.add('stop-scrolling');
+  const container = document.getElementById('project-detail');
+  container.classList.toggle('display-none');
+  container.classList.toggle('card');
+  // Creating elements
+  const h2 = document.createElement('h2');
+  const tagsDiv = document.createElement('div');
+  tagsDiv.classList.add('tags')
+  const tag1 = document.createElement('p');
+  const bullet1 = document.createElement('img');
+  const tag2 = document.createElement('span');
+  const bullet2 = document.createElement('img');
+  const tag3 = document.createElement('span');
+  const mainImg = document.createElement('img');
+  const description = document.createElement('p');
+  description.classList.add('description');
+  const techDiv = document.createElement('ul');
+  techDiv.classList.add('technologies')
+  for(let i = 0; i < obj.technologies.length; i++) {
+    const li = document.createElement('li');
+    li.innerText = obj.technologies[i];
+    li.classList.add('technologies__li')
+    techDiv.appendChild(li);
+  }
+  const buttonsDiv = document.createElement('div');
+  const button1 = document.createElement('button');
+  button1.classList.add('primary-button');
+  const btnImg1 = document.createElement('img');
+  const btnImg2 = document.createElement('img');
+  const button2 = document.createElement('button');
+  // Add content
+  h2.innerText = obj.title;
+  tag1.innerText = obj.tags[0];
+  tag2.innerText = obj.tags[1];
+  tag3.innerText = obj.tags[2];
+  bullet1.src = './img/Counter.png';
+  bullet2.src = './img/Counter.png';
+  mainImg.src = obj.image;
+  description.innerText = obj.description;
+  // Append
+  container.append(h2, tagsDiv, mainImg, description, techDiv, buttonsDiv);
+  tagsDiv.append(tag1, bullet1, tag2, bullet2, tag3);
+  buttonsDiv.append(button1, button2);
+  buttonsDiv.classList.add('projectDetails__button')
+  button1.innerText = 'See live';
+  button1.appendChild(btnImg1);
+  button2.innerText = 'See source';
+  button2.appendChild(btnImg2);
+}
+
 // Portfolio 
 import data from './projectsData.js';
 const portfolio = document.getElementById('portfolio');
+
+
 
 for(let i = 0; i < data.length; i++) {
   const div = document.createElement('div');
@@ -57,8 +110,8 @@ for(let i = 0; i < data.length; i++) {
   const technologies = document.createElement('ul');
   technologies.classList.add('technologies');
   const bttnDiv = document.createElement('div');
-  const bttnA = document.createElement('a');
   const button = document.createElement('button');
+  button.classList.add('project-button')
   button.classList.add('primary-button');
   button.type = 'button';
   button.innerText = 'See Project';
@@ -78,7 +131,6 @@ for(let i = 0; i < data.length; i++) {
     li.innerText = data[i].technologies[j];
     technologies.appendChild(li);
   }
-  bttnA.href = data[i].link;
   // Append child
   div.appendChild(img);
   div.appendChild(contentDiv);
@@ -92,7 +144,11 @@ for(let i = 0; i < data.length; i++) {
   contentDiv.appendChild(pDscrptn);
   contentDiv.appendChild(technologies);
   contentDiv.appendChild(bttnDiv);
-  bttnDiv.appendChild(bttnA);
-  bttnA.appendChild(button);
+  bttnDiv.appendChild(button);
   portfolio.appendChild(div);
+  button.addEventListener('click', () => {
+    projectDetails(data[i])
+  })
 }
+
+// Porject details 
