@@ -241,7 +241,7 @@ a {
   border: 2px solid #396df2;
   background-color: white;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1.4rem;
   flex: none;
 }
 
@@ -553,8 +553,23 @@ textarea {
   left: 50%;
 }
 
-.projectDetails__button {
+.projectDetails__h1Div {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.projectDetails__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.projectDetails__button {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 1rem;
 }

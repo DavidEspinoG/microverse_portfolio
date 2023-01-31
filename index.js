@@ -1,5 +1,4 @@
 // Modal
-
 const menu = document.getElementById('burger-menu');
 const modal = document.getElementById('modal');
 const body = document.querySelector('body');
@@ -35,18 +34,36 @@ for (let i = 0; i < modalLnks.length; i += 1) {
 }
 
 function projectDetails(obj) {
-  // body.classList.add('stop-scrolling');
+  const portfolio = document.getElementById('portfolio');
+  portfolio.classList.add('blur')
+  body.classList.add('stop-scrolling');
   const container = document.getElementById('project-detail');
-  container.classList.toggle('display-none');
-  container.classList.toggle('card');
+  container.classList.remove('display-none');
+  container.classList.add('card');
   // Creating elements
+  const h2Div = document.createElement('div');
+  h2Div.classList.add('projectDetails__h1Div');
   const h2 = document.createElement('h2');
+  const exitButton = document.createElement('i');
+  exitButton.setAttribute('id', 'projectDetails__exit')
+  exitButton.classList.add('fa-solid');
+  exitButton.classList.add('fa-xmark');
+  exitButton.classList.add('fa-2xl');
+  exitButton.addEventListener('click', () => {
+    container.innerHTML = '';
+    container.classList.add('display-none');
+    container.classList.remove('card');
+    body.classList.remove('stop-scrolling');
+    portfolio.classList.remove('blur');
+  })
   const tagsDiv = document.createElement('div');
   tagsDiv.classList.add('tags')
   const tag1 = document.createElement('p');
   const bullet1 = document.createElement('img');
+  bullet1.classList.add('bullet');
   const tag2 = document.createElement('span');
   const bullet2 = document.createElement('img');
+  bullet2.classList.add('bullet');
   const tag3 = document.createElement('span');
   const mainImg = document.createElement('img');
   const description = document.createElement('p');
@@ -61,7 +78,7 @@ function projectDetails(obj) {
   }
   const buttonsDiv = document.createElement('div');
   const button1 = document.createElement('button');
-  button1.classList.add('primary-button');
+  // button1.classList.add('primary-button');
   const btnImg1 = document.createElement('img');
   const btnImg2 = document.createElement('img');
   const button2 = document.createElement('button');
@@ -74,11 +91,16 @@ function projectDetails(obj) {
   bullet2.src = './img/Counter.png';
   mainImg.src = obj.image;
   description.innerText = obj.description;
+  btnImg1.src = './img/see-live.svg';
+  btnImg2.src = './img/github-in-button.svg';
+  button1.classList.add('projectDetails__button');
+  button2.classList.add('projectDetails__button');
   // Append
-  container.append(h2, tagsDiv, mainImg, description, techDiv, buttonsDiv);
+  container.append(h2Div, tagsDiv, mainImg, description, techDiv, buttonsDiv);
+  h2Div.append(h2, exitButton);
   tagsDiv.append(tag1, bullet1, tag2, bullet2, tag3);
   buttonsDiv.append(button1, button2);
-  buttonsDiv.classList.add('projectDetails__button')
+  buttonsDiv.classList.add('projectDetails__buttons')
   button1.innerText = 'See live';
   button1.appendChild(btnImg1);
   button2.innerText = 'See source';
@@ -88,8 +110,6 @@ function projectDetails(obj) {
 // Portfolio 
 import data from './projectsData.js';
 const portfolio = document.getElementById('portfolio');
-
-
 
 for(let i = 0; i < data.length; i++) {
   const div = document.createElement('div');
@@ -102,6 +122,9 @@ for(let i = 0; i < data.length; i++) {
   tagsDiv.classList.add('tags');
   const tag1 = document.createElement('p');
   const bullet = document.createElement('img');
+  bullet.classList.add('bullet')
+  const bullet2 = document.createElement('img');
+  bullet2.classList.add('bullet')
   const span1 = document.createElement('span');
   const span2 = document.createElement('span');
   // End of tags div
@@ -121,6 +144,7 @@ for(let i = 0; i < data.length; i++) {
   h2.innerText = data[i].title;
   tag1.innerText = data[i].tags[0];
   bullet.src = './img/Counter.png';
+  bullet2.src = './img/Counter.png';
   span1.innerText = data[i].tags[1];
   span2.innerText = data[i].tags[2];
   pDscrptn.innerText = data[i].description;
@@ -139,7 +163,7 @@ for(let i = 0; i < data.length; i++) {
   tagsDiv.appendChild(tag1);
   tagsDiv.appendChild(bullet);
   tagsDiv.appendChild(span1);
-  tagsDiv.appendChild(bullet);
+  tagsDiv.appendChild(bullet2);
   tagsDiv.appendChild(span2);
   contentDiv.appendChild(pDscrptn);
   contentDiv.appendChild(technologies);
@@ -151,4 +175,3 @@ for(let i = 0; i < data.length; i++) {
   })
 }
 
-// Porject details 
