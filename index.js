@@ -1,4 +1,7 @@
 // Modal
+// Portfolio
+import data from './projectsData.js';
+
 const menu = document.getElementById('burger-menu');
 const modal = document.getElementById('modal');
 const body = document.querySelector('body');
@@ -34,8 +37,9 @@ for (let i = 0; i < modalLnks.length; i += 1) {
 }
 
 function projectDetails(obj) {
+  const { tags } = obj;
   const portfolio = document.getElementById('portfolio');
-  portfolio.classList.add('blur')
+  portfolio.classList.add('blur');
   body.classList.add('stop-scrolling');
   const container = document.getElementById('project-detail');
   container.classList.remove('display-none');
@@ -44,7 +48,7 @@ function projectDetails(obj) {
   h2Div.classList.add('projectDetails__h1Div');
   const h2 = document.createElement('h2');
   const exitButton = document.createElement('i');
-  exitButton.setAttribute('id', 'projectDetails__exit')
+  exitButton.setAttribute('id', 'projectDetails__exit');
   exitButton.classList.add('fa-solid');
   exitButton.classList.add('fa-xmark');
   exitButton.classList.add('fa-2xl');
@@ -54,9 +58,9 @@ function projectDetails(obj) {
     container.classList.remove('card');
     body.classList.remove('stop-scrolling');
     portfolio.classList.remove('blur');
-  })
+  });
   const tagsDiv = document.createElement('div');
-  tagsDiv.classList.add('projectDetail__tags')
+  tagsDiv.classList.add('projectDetail__tags');
   const tag1 = document.createElement('p');
   const bullet1 = document.createElement('img');
   bullet1.classList.add('bullet');
@@ -73,11 +77,11 @@ function projectDetails(obj) {
   const techDiv = document.createElement('ul');
   const textDiv = document.createElement('div');
   textDiv.classList.add('projectDetail__textDiv');
-  techDiv.classList.add('technologies')
-  for(let i = 0; i < obj.technologies.length; i++) {
+  techDiv.classList.add('technologies');
+  for (let i = 0; i < obj.technologies.length; i += 1) {
     const li = document.createElement('li');
     li.innerText = obj.technologies[i];
-    li.classList.add('technologies__li')
+    li.classList.add('technologies__li');
     techDiv.appendChild(li);
   }
   const buttonsDiv = document.createElement('div');
@@ -91,9 +95,10 @@ function projectDetails(obj) {
   leftDiv.classList.add('projectDetail__leftDiv');
   // Add content
   h2.innerText = obj.title;
-  tag1.innerText = obj.tags[0];
-  tag2.innerText = obj.tags[1];
-  tag3.innerText = obj.tags[2];
+  const [tagText1, tagText2, tagText3] = tags;
+  tag1.innerText = tagText1;
+  tag2.innerText = tagText2;
+  tag3.innerText = tagText3;
   bullet1.src = './img/Counter.png';
   bullet2.src = './img/Counter.png';
   mainImg.src = obj.image;
@@ -107,35 +112,32 @@ function projectDetails(obj) {
   imgDiv.appendChild(mainImg);
   textDiv.append(description);
   leftDiv.append(techDiv, line, buttonsDiv);
-  textDiv.append(leftDiv)
+  textDiv.append(leftDiv);
   h2Div.append(h2, exitButton);
   tagsDiv.append(tag1, bullet1, tag2, bullet2, tag3);
   buttonsDiv.append(button1, button2);
-  buttonsDiv.classList.add('projectDetails__buttons')
+  buttonsDiv.classList.add('projectDetails__buttons');
   button1.innerText = 'See live';
   button1.appendChild(btnImg1);
   button2.innerText = 'See source';
   button2.appendChild(btnImg2);
 }
-
-// Portfolio 
-import data from './projectsData.js';
 const portfolio = document.getElementById('portfolio');
 
-for(let i = 0; i < data.length; i++) {
+for (let i = 0; i < data.length; i += 1) {
   const div = document.createElement('div');
   div.classList.add('card');
   const img = document.createElement('img');
   const contentDiv = document.createElement('div');
   const h2 = document.createElement('h2');
-  //Tags div
+  // Tags div
   const tagsDiv = document.createElement('div');
   tagsDiv.classList.add('tags');
   const tag1 = document.createElement('p');
   const bullet = document.createElement('img');
-  bullet.classList.add('bullet')
+  bullet.classList.add('bullet');
   const bullet2 = document.createElement('img');
-  bullet2.classList.add('bullet')
+  bullet2.classList.add('bullet');
   const span1 = document.createElement('span');
   const span2 = document.createElement('span');
   // End of tags div
@@ -145,22 +147,24 @@ for(let i = 0; i < data.length; i++) {
   technologies.classList.add('technologies');
   const bttnDiv = document.createElement('div');
   const button = document.createElement('button');
-  button.classList.add('project-button')
+  button.classList.add('project-button');
   button.classList.add('primary-button');
   button.type = 'button';
   button.innerText = 'See Project';
-  //Add Content 
-  img.src = data[i].image;
-  img.alt = data[i].title + ' img';
-  h2.innerText = data[i].title;
-  tag1.innerText = data[i].tags[0];
+  // Add Content
+  const { title, image, tags } = data[i];
+  img.src = image;
+  img.alt = `${title} img`;
+  h2.innerText = title;
+  const [tagText1, tagText2, tagText3] = tags;
+  tag1.innerText = tagText1;
   bullet.src = './img/Counter.png';
   bullet2.src = './img/Counter.png';
-  span1.innerText = data[i].tags[1];
-  span2.innerText = data[i].tags[2];
+  span1.innerText = tagText2;
+  span2.innerText = tagText3;
   pDscrptn.innerText = data[i].description;
-  // Technologies for loop 
-  for(let j = 0; j < data[i].technologies.length; j++ ){
+  // Technologies for loop
+  for (let j = 0; j < data[i].technologies.length; j += 1) {
     const li = document.createElement('li');
     li.classList.add('technologies__li');
     li.innerText = data[i].technologies[j];
@@ -182,7 +186,6 @@ for(let i = 0; i < data.length; i++) {
   bttnDiv.appendChild(button);
   portfolio.appendChild(div);
   button.addEventListener('click', () => {
-    projectDetails(data[i])
-  })
+    projectDetails(data[i]);
+  });
 }
-
