@@ -7,23 +7,19 @@ const modal = document.getElementById('modal');
 const body = document.querySelector('body');
 const exitBtn = document.getElementById('exit-button');
 const modalLnks = document.querySelectorAll('.modal__navigation__li');
-const hero = document.getElementById('hero');
-const header = document.querySelector('header');
-
+const blur = document.getElementById('blur');
 menu.addEventListener('click', (event) => {
   event.stopPropagation();
   modal.classList.remove('display-none');
   body.classList.add('stop-scrolling');
-  hero.classList.add('blur');
-  header.classList.add('blur');
+  blur.classList.add('blur');
 });
 
 exitBtn.addEventListener('click', (event) => {
   event.stopPropagation();
   modal.classList.add('display-none');
   body.classList.remove('stop-scrolling');
-  hero.classList.remove('blur');
-  header.classList.remove('blur');
+  blur.classList.remove('blur');
 });
 
 for (let i = 0; i < modalLnks.length; i += 1) {
@@ -31,15 +27,13 @@ for (let i = 0; i < modalLnks.length; i += 1) {
     event.stopPropagation();
     modal.classList.add('display-none');
     body.classList.remove('stop-scrolling');
-    hero.classList.remove('blur');
-    header.classList.remove('blur');
+    blur.classList.remove('blur');
   });
 }
 
 function projectDetails(obj) {
   const { tags } = obj;
-  const portfolio = document.getElementById('portfolio');
-  portfolio.classList.add('blur');
+  blur.classList.add('blur');
   body.classList.add('stop-scrolling');
   const container = document.getElementById('project-detail');
   container.classList.remove('display-none');
@@ -57,7 +51,7 @@ function projectDetails(obj) {
     container.classList.add('display-none');
     container.classList.remove('card');
     body.classList.remove('stop-scrolling');
-    portfolio.classList.remove('blur');
+    blur.classList.remove('blur');
   });
   const tagsDiv = document.createElement('div');
   tagsDiv.classList.add('projectDetail__tags');

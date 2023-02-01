@@ -543,7 +543,8 @@ textarea {
 
 .projectDetail {
   background-color: #fff;
-  width: 90%;
+  width: 120rem;
+  max-width: 90%;
   height: 90vh;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -606,7 +607,7 @@ textarea {
 }
 
 .projectDetails__img {
-  width: 100rem;
+  width: 120rem;
   max-width: 100%;
 }
 
@@ -638,6 +639,7 @@ textarea {
   }
 
   .projectDetails__button {
-    padding: 1.2rem 2rem;
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
   }
 }
