@@ -39,7 +39,6 @@ function projectDetails(obj) {
   body.classList.add('stop-scrolling');
   const container = document.getElementById('project-detail');
   container.classList.remove('display-none');
-  container.classList.add('card');
   // Creating elements
   const h2Div = document.createElement('div');
   h2Div.classList.add('projectDetails__h1Div');
@@ -57,7 +56,7 @@ function projectDetails(obj) {
     portfolio.classList.remove('blur');
   })
   const tagsDiv = document.createElement('div');
-  tagsDiv.classList.add('tags')
+  tagsDiv.classList.add('projectDetail__tags')
   const tag1 = document.createElement('p');
   const bullet1 = document.createElement('img');
   bullet1.classList.add('bullet');
@@ -66,9 +65,14 @@ function projectDetails(obj) {
   bullet2.classList.add('bullet');
   const tag3 = document.createElement('span');
   const mainImg = document.createElement('img');
+  const imgDiv = document.createElement('div');
+  imgDiv.classList.add('projectDetail__imgDiv');
+  mainImg.classList.add('projectDetails__img');
   const description = document.createElement('p');
   description.classList.add('description');
   const techDiv = document.createElement('ul');
+  const textDiv = document.createElement('div');
+  textDiv.classList.add('projectDetail__textDiv');
   techDiv.classList.add('technologies')
   for(let i = 0; i < obj.technologies.length; i++) {
     const li = document.createElement('li');
@@ -78,10 +82,13 @@ function projectDetails(obj) {
   }
   const buttonsDiv = document.createElement('div');
   const button1 = document.createElement('button');
-  // button1.classList.add('primary-button');
   const btnImg1 = document.createElement('img');
   const btnImg2 = document.createElement('img');
   const button2 = document.createElement('button');
+  const leftDiv = document.createElement('div');
+  const line = document.createElement('hr');
+  line.classList.add('projectDetail__hr');
+  leftDiv.classList.add('projectDetail__leftDiv');
   // Add content
   h2.innerText = obj.title;
   tag1.innerText = obj.tags[0];
@@ -96,7 +103,11 @@ function projectDetails(obj) {
   button1.classList.add('projectDetails__button');
   button2.classList.add('projectDetails__button');
   // Append
-  container.append(h2Div, tagsDiv, mainImg, description, techDiv, buttonsDiv);
+  container.append(h2Div, tagsDiv, imgDiv, textDiv);
+  imgDiv.appendChild(mainImg);
+  textDiv.append(description);
+  leftDiv.append(techDiv, line, buttonsDiv);
+  textDiv.append(leftDiv)
   h2Div.append(h2, exitButton);
   tagsDiv.append(tag1, bullet1, tag2, bullet2, tag3);
   buttonsDiv.append(button1, button2);
