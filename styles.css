@@ -5,7 +5,7 @@
 }
 
 .blur {
-  filter: blur(0.5rem);
+  filter: blur(0.5rem) brightness(70%);
 }
 
 .display-none {
@@ -241,8 +241,7 @@ a {
   border: 2px solid #396df2;
   background-color: white;
   border-radius: 8px;
-  padding: 1rem;
-  flex: none;
+  padding: 1.4rem;
 }
 
 .about {
@@ -531,4 +530,116 @@ textarea {
   display: flex;
   justify-content: end;
   padding: 25px 0;
+}
+
+/* Project Details */
+
+.projectDetailContainer {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.projectDetail {
+  background-color: #fff;
+  width: 120rem;
+  max-width: 90%;
+  height: 90vh;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 2rem;
+  top: 50%;
+  left: 50%;
+  padding: 1.7rem;
+  overflow-y: scroll;
+}
+
+.projectDetail h2 {
+  color: #172b4d;
+  font-size: 2.4rem;
+}
+
+.projectDetails__h1Div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.projectDetails__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+}
+
+.projectDetails__button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  color: #396df2;
+  border: 1px solid #396df2;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.6rem 2.6rem;
+  font-size: 1.7rem;
+}
+
+.projectDetail__tags {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.projectDetail__tags p {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.projectDetail__tags span {
+  color: #7a869a;
+  font-size: 1.4rem;
+}
+
+.projectDetails__img {
+  width: 120rem;
+  max-width: 100%;
+}
+
+.projectDetail__imgDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.projectDetail__hr {
+  border: 1px solid #ebecf0;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .projectDetail__textDiv {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .projectDetail__textDiv p,
+  ul {
+    margin-top: 0;
+  }
+
+  .projectDetails__buttons {
+    justify-content: start;
+  }
+
+  .projectDetails__button {
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+  }
 }
