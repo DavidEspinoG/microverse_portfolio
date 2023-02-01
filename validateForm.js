@@ -1,11 +1,11 @@
-const contactForm = document.getElementById('contact');
-const emailInput = contactForm.element['email'];
-
+const contactForm = document.getElementById('contactForm');
+const emailInput = contactForm.elements.email;
 function emailValidate(strng) {
   const toLower = strng.toLowerCase();
   if (strng === toLower) {
     return true;
   }
+  return false;
 }
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
