@@ -353,6 +353,7 @@ a {
 textarea {
   border-radius: 2px;
   padding: 1rem;
+  color: #172b4d;
 }
 
 .form__label {
@@ -642,4 +643,13 @@ textarea {
     padding: 0.8rem 1rem;
     font-size: 1.4rem;
   }
+}
+
+.errorMessage {
+  color: red;
+  font-weight: 500;
+  font-size: 1.7rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
 }

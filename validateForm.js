@@ -12,8 +12,15 @@ contactForm.addEventListener('submit', (event) => {
   if (emailValidate(emailInput.value)) {
     contactForm.submit();
   } else {
-    const p = document.createElement('p');
-    p.innerText = 'Please make sure the email is in lowercase.';
-    contactForm.appendChild(p);
+    const span = document.createElement('span');
+    const submitButton = document.getElementById('submitButton');
+    span.innerText = 'Please be sure the email is in lowercase.';
+    span.setAttribute('id', 'emailError');
+    span.classList.add('errorMessage');
+    contactForm.insertBefore(span, submitButton);
+    const emailError = document.getElementById('emailError');
+    setTimeout(() => {
+      emailError.remove();
+    }, 4000)
   }
 });
