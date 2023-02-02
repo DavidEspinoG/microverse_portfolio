@@ -549,7 +549,6 @@ textarea {
   height: 90vh;
   position: fixed;
   transform: translate(-50%, -50%);
-  z-index: 2;
   border-radius: 2rem;
   top: 50%;
   left: 50%;
