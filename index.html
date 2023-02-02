@@ -116,11 +116,13 @@
                 action="https://formspree.io/f/mayznovg"
                 method="POST"
                 class="form-container__form"
+                id="contactForm"
                 >
                     <input id="name" maxlength="30" placeholder="Your name: " type="text" name="name" class="input" required>
                     <input placeholder="Your email: " type="email" name="email" class="input" required>
                     <textarea maxlength="500" placeholder="Your message" name="message" required></textarea>
-                    <button class="secondary-button" type="submit">Get in touch</button>
+                    <button class="secondary-button" type="submit" id="submitButton">Get in touch</button>
+                    <span id="contactErrors" class="errorMessage"></span>
                 </form>
             </div>    
         </section>
@@ -130,5 +132,6 @@
 
     </div>
     <script src="./index.js" type="module"></script>
+    <script src="./validateForm.js"></script>
 </body>
 </html>
