@@ -21,6 +21,6 @@ contactForm.addEventListener('submit', (event) => {
     const emailError = document.getElementById('emailError');
     setTimeout(() => {
       emailError.remove();
-    }, 4000)
+    }, 4000);
   }
 });
