@@ -10,13 +10,13 @@ function emailValidate(strng) {
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const span = document.getElementById('contactErrors');
-  span.innerHTML = '';
+  span.innerHTML = 'Please be sure the email is in lowercase.';
   if (emailValidate(emailInput.value)) {
     contactForm.submit();
   } else {
     span.innerText = 'Please be sure the email is in lowercase.';
     setTimeout(() => {
-      span.innerHTML = '';
+      span.innerHTML = 'Please be sure the email is in lowercase.';
     }, 4000);
   }
 });

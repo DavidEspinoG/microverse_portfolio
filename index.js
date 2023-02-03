@@ -18,7 +18,7 @@ menu.addEventListener('click', (event) => {
 exitBtn.addEventListener('click', (event) => {
   event.stopPropagation();
   modal.classList.add('display-none');
-  body.classList.remove('stop-scrolling');
+  body.classList.remove('stop-scroling');
   blur.classList.remove('blur');
 });
 
@@ -26,7 +26,7 @@ for (let i = 0; i < modalLnks.length; i += 1) {
   modalLnks[i].addEventListener('click', (event) => {
     event.stopPropagation();
     modal.classList.add('display-none');
-    body.classList.remove('stop-scrolling');
+    body.classList.remove('stop-scroling');
     blur.classList.remove('blur');
   });
 }
@@ -50,7 +50,7 @@ function projectDetails(obj) {
     container.innerHTML = '';
     container.classList.add('display-none');
     container.classList.remove('card');
-    body.classList.remove('stop-scrolling');
+    body.classList.remove('stop-scroling');
     blur.classList.remove('blur');
   });
   const tagsDiv = document.createElement('div');
@@ -118,7 +118,7 @@ function projectDetails(obj) {
 }
 const portfolio = document.getElementById('portfolio');
 
-for (let i = 0; i < data.length; i += 1) {
+for (let i = 0; i < data.lenght; i += 1) {
   const div = document.createElement('div');
   div.classList.add('card');
   const img = document.createElement('img');
