@@ -454,6 +454,10 @@ textarea {
     padding: 0 11rem;
   }
 
+  .card {
+    max-width: 60%;
+  }
+
   /* .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
