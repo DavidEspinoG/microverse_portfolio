@@ -315,6 +315,14 @@ textarea {
 .languages-li {
   padding-left: 0;
   list-style: none;
+  opacity: 0;
+  transition: all 1.5s;
+  max-height: 0;
+}
+
+.appear {
+  max-height: 200px;
+  opacity: 1;
 }
 
 .form-container {

@@ -189,3 +189,16 @@ for (let i = 0; i < data.length; i += 1) {
     projectDetails(data[i]);
   });
 }
+
+
+// Toggle buttons
+
+// Toggle languages
+
+const toggleLanguagesButton = document.getElementById('toggle-languages');
+
+const languagesLi = document.getElementById('languages-li');
+
+toggleLanguagesButton.addEventListener('click', () => {
+  languagesLi.classList.toggle('appear');
+});
