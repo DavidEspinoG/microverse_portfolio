@@ -54,6 +54,11 @@ header {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
 .logo a {
   font-family: var(--secondaryFont);
   font-size: 30px;
@@ -131,11 +136,6 @@ textarea {
 .hero-text span {
   color: var(--purple);
   font-size: 1.7rem;
-}
-
-a {
-  text-decoration: none;
-  color: var(--purple);
 }
 
 .social-media {
@@ -639,6 +639,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
   }
+
   .projectDetail__textDiv {
     display: grid;
     grid-template-columns: 3fr 2fr;
