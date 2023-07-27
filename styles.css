@@ -2,6 +2,7 @@
   --purple: #6070ff;
   --mainFont: 'Poppins';
   --black: #172b4d;
+  --secondaryFont: 'Ms Madi', cursive;
 }
 
 .blur {
@@ -51,6 +52,12 @@ header {
   width: 90%;
   max-width: 85%;
   margin: 0 auto;
+}
+
+.logo a {
+  font-family: var(--secondaryFont);
+  font-size: 30px;
+  color: var(--black);
 }
 
 header p,
@@ -133,17 +140,17 @@ a {
 
 .social-media {
   list-style: none;
-  padding-left: 0;
+  padding: 10px 10px 10px 0;
   display: flex;
   gap: 2.5rem;
 }
 
-.social-media li img {
-  height: 25px;
+.social-media li i {
+  font-size: 32px;
 }
 
 .social-media__li {
-  transition: transform 2s;
+  transition: transform 1s;
   transform: scale(1);
 }
 
@@ -417,7 +424,9 @@ textarea {
 
   .desktop-navigation ul {
     display: flex;
+    align-items: center;
     gap: 2rem;
+    height: 20px;
   }
 
   .desktop-navigation ul li {
@@ -427,11 +436,11 @@ textarea {
   .nav-link {
     color: #344563;
     font-size: 2rem;
-    transition: rotate 1s;
+    transition: color 1s;
   }
 
-  .nav-link:hover {
-    rotate: 10deg;
+  .nav-link a:hover {
+    color: var(--black);
   }
 
   .hero {
@@ -629,8 +638,7 @@ textarea {
     margin-top: 2rem;
   }
 
-  .projectDetail__textDiv p,
-  ul {
+  .projectDetail__textDiv p {
     margin-top: 0;
   }
 
