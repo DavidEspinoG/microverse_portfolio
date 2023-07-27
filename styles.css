@@ -414,6 +414,9 @@ textarea {
 
 /* Desktop version */
 @media (min-width: 768px) {
+  /* .card_image {
+    height: 400px;
+  } */
   .burger-icon {
     display: none;
   }
@@ -451,13 +454,13 @@ textarea {
     padding: 0 11rem;
   }
 
-  .card {
+  /* .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     max-width: 80%;
     margin: 0 auto;
-  }
+  } */
 
   .desktop-about {
     display: grid;
@@ -631,6 +634,11 @@ textarea {
 }
 
 @media (min-width: 768px) {
+  .card_image_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .projectDetail__textDiv {
     display: grid;
     grid-template-columns: 3fr 2fr;

@@ -79,10 +79,12 @@ function projectDetails(obj) {
     techDiv.appendChild(li);
   }
   const buttonsDiv = document.createElement('div');
-  const button1 = document.createElement('button');
+  const button1 = document.createElement('a');
+  button1.href = obj.deployLink;
   const btnImg1 = document.createElement('img');
   const btnImg2 = document.createElement('img');
-  const button2 = document.createElement('button');
+  const button2 = document.createElement('a');
+  button2.href = obj.repoLink;
   const leftDiv = document.createElement('div');
   const line = document.createElement('hr');
   line.classList.add('projectDetail__hr');
@@ -121,7 +123,10 @@ const portfolio = document.getElementById('portfolio');
 for (let i = 0; i < data.length; i += 1) {
   const div = document.createElement('div');
   div.classList.add('card');
+  const imgDiv = document.createElement('div');
+  imgDiv.classList.add('card_image_div');
   const img = document.createElement('img');
+  img.classList.add('card_image');
   const contentDiv = document.createElement('div');
   const h2 = document.createElement('h2');
   // Tags div
@@ -165,7 +170,8 @@ for (let i = 0; i < data.length; i += 1) {
     technologies.appendChild(li);
   }
   // Append child
-  div.appendChild(img);
+  imgDiv.appendChild(img)
+  div.appendChild(imgDiv);
   div.appendChild(contentDiv);
   contentDiv.appendChild(h2);
   contentDiv.appendChild(tagsDiv);

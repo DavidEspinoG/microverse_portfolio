@@ -1,12 +1,13 @@
 const data = [
   {
     id: 1,
-    title: 'Movie App',
+    title: 'Movies App',
     tags: ['Freelance', 'Front-end', '2022'],
     description: 'A project that uses MovieDB API for getting information about the most viewed movies of the last seven days.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum neque eget quam auctor finibus. Suspendisse vulputate tortor non ex semper lacinia. Sed ac lacinia elit. Praesent in lacus eu sapien vehicula congue. Ut non hendrerit sem, quis condimentum lectus. Donec pretium sodales augue at laoreet. Nunc purus diam, auctor ut dignissim eget, sagittis ut dui',
     technologies: ['React', 'API', 'JavaScript'],
-    link: 'https://davidespinog.github.io/platzi_movies_react/',
-    image: './img/portfolio1.jpg',
+    repoLink: 'https://github.com/DavidEspinoG/platzi_movies_react',
+    deployLink: 'https://davidespinog.github.io/platzi_movies_react/',
+    image: './img/movies.png',
   },
   {
     id: 2,
@@ -14,7 +15,8 @@ const data = [
     tags: ['CANOPY', 'Back-End', '2015'],
     description: 'A project that uses MovieDB API for getting information about the most viewed movies of the last seven days.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum neque eget quam auctor finibus. Suspendisse vulputate tortor non ex semper lacinia. Sed ac lacinia elit. Praesent in lacus eu sapien vehicula congue. Ut non hendrerit sem, quis condimentum lectus. Donec pretium sodales augue at laoreet. Nunc purus diam, auctor ut dignissim eget, sagittis ut dui',
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://davidespinog.github.io/platzi_movies_react/',
+    repoLink: '',
+    deployLink: '',
     image: './img/portfolio2.jpg',
   },
   {
@@ -23,7 +25,8 @@ const data = [
     tags: ['CANOPY', 'Back-End', '2015'],
     description: 'A project that uses MovieDB API for getting information about the most viewed movies of the last seven days.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum neque eget quam auctor finibus. Suspendisse vulputate tortor non ex semper lacinia. Sed ac lacinia elit. Praesent in lacus eu sapien vehicula congue. Ut non hendrerit sem, quis condimentum lectus. Donec pretium sodales augue at laoreet. Nunc purus diam, auctor ut dignissim eget, sagittis ut dui',
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://davidespinog.github.io/platzi_movies_react/',
+    repoLink: '',
+    deployLink: '',
     image: './img/portfolio3.jpg',
   },
 ];
