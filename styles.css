@@ -290,7 +290,6 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2.5rem;
 }
 
 .languages h3 {
@@ -316,12 +315,19 @@ textarea {
   padding-left: 0;
   list-style: none;
   opacity: 0;
-  transition: all 1.5s;
-  max-height: 0;
+  transition: all 0.5s;
+  height: 0;
+  margin: 0;
+  display: none;
+}
+
+#toggle-languages:hover{
+  cursor: pointer;
 }
 
 .appear {
-  max-height: 200px;
+  display: block;
+  height: 300px;
   opacity: 1;
 }
 
@@ -481,7 +487,8 @@ textarea {
   }
 
   .languages {
-    margin-top: 0;
+    margin: 0;
+    z-index: 2;
   }
 
   .tags p,
@@ -674,6 +681,7 @@ textarea {
 }
 
 .errorMessage {
+  display: none;
   color: red;
   font-weight: 500;
   font-size: 1.7rem;

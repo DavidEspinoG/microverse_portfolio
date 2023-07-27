@@ -202,3 +202,14 @@ const languagesLi = document.getElementById('languages-li');
 toggleLanguagesButton.addEventListener('click', () => {
   languagesLi.classList.toggle('appear');
 });
+
+// Toggle frameworks
+
+const toggleFrameworksButton = document.getElementById('toggle-frameworks'); 
+
+const frameworksLi = document.getElementById('frameworks-li');
+
+
+toggleFrameworksButton.addEventListener('click', () => {
+  frameworksLi.classList.toggle('appear');
+}, false)
