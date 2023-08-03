@@ -12,12 +12,22 @@ const data = [
   {
     id: 2,
     title: 'Videogames app',
-    tags: ['Microverse', 'Full-Stack', '2015'],
+    tags: ['Microverse', 'Full-Stack', '2023'],
     description: 'A Full-Stack project created with React, Ruby on Rails, Postgresql and Redux that offers videogames for rent. The user can create a new account and log in with email and password. ',
     technologies: ['React', 'Rails', 'Redux'],
     repoLink: 'https://github.com/DavidEspinoG/mc_videogames_front',
     deployLink: 'https://videogames-capstone.onrender.com/',
     image: './img/videogames.png',
+  },
+  {
+    id: 3,
+    title: 'TrendingApp',
+    tags: ['Microverse', 'Front-end', '2023'],
+    description: 'This project displays the 20 most popular movies of the day. It allows users to interact with the app by liking, commenting, and reserving a digital copy of each specific movie',
+    technologies: ['JavaScript', 'CSS', 'API'],
+    repoLink: 'https://github.com/DavidEspinoG/capstone_project_2_API',
+    deployLink: 'https://davidespinog.github.io/capstone_project_2_API/',
+    image: './img/portfolio3.png',
   },
 ];
 
