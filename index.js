@@ -123,6 +123,7 @@ const portfolio = document.getElementById('portfolio');
 for (let i = 0; i < data.length; i += 1) {
   const div = document.createElement('div');
   div.classList.add('card');
+  // div.classList.add('');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('card_image_div');
   const img = document.createElement('img');
@@ -213,3 +214,22 @@ const frameworksLi = document.getElementById('frameworks-li');
 toggleFrameworksButton.addEventListener('click', () => {
   frameworksLi.classList.toggle('appear');
 }, false)
+
+//animations 
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      console.log('works')
+      let element = entry.target;
+      element.classList.add('fade-in');
+    }
+  })
+})
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  observer.observe(card);
+});
