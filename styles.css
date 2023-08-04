@@ -349,7 +349,7 @@ textarea {
 
 .appear {
   display: block;
-  height: 300px;
+  height: auto;
   opacity: 1;
 }
 
