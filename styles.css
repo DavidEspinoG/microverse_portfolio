@@ -13,6 +13,10 @@
   display: none;
 }
 
+.visible {
+  visibility: visible!important;
+}
+
 .fixed {
   position: fixed;
 }
@@ -47,20 +51,24 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
   position: sticky;
   top: 0;
   width: 100%;
   background-color: white;
   z-index: 10;
-  padding: 0 60px;
+  padding: 15px 60px;
 }
 
 a {
   text-decoration: none;
   color: var(--purple);
+}
+
+.logo {
+  margin: 0;
 }
 
 .logo a {
@@ -76,7 +84,17 @@ nav {
 }
 
 .desktop-navigation {
-  display: none;
+  display: flex;
+  visibility: collapse;
+}
+
+.desktop-navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-navigation ul li {
+  list-style: none;
 }
 
 header p {
@@ -432,15 +450,18 @@ textarea {
 
 /* Desktop version */
 @media (min-width: 768px) {
-  /* .card_image {
-    height: 400px;
-  } */
   .burger-icon {
     display: none;
   }
 
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .desktop-navigation {
-    display: inline;
+    visibility: visible;
   }
 
   .desktop-navigation ul {
@@ -476,14 +497,6 @@ textarea {
     max-width: 60%;
   }
 
-  /* .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    max-width: 80%;
-    margin: 0 auto;
-  } */
-
   .desktop-about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -498,10 +511,6 @@ textarea {
   .tags p,
   span {
     font-size: 1.8rem;
-  }
-
-  .languages h3 {
-    margin-top: 0;
   }
 
   .form-container__img {
