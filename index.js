@@ -217,13 +217,13 @@ toggleFrameworksButton.addEventListener('click', () => {
 
 //animations 
 
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
+    let element = entry.target;
     if(entry.isIntersecting){
-      console.log('works')
-      let element = entry.target;
       element.classList.add('fade-in');
+    } else {
+      element.classList.remove('fade-in');
     }
   })
 })

@@ -49,9 +49,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  max-width: 85%;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  padding: 0 60px;
 }
 
 a {
