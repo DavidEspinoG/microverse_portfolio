@@ -12,9 +12,6 @@ const blur = document.getElementById('blur');
 menu.addEventListener('click', (event) => {
   event.stopPropagation();
   navigation.classList.toggle('visible');
-  // modal.classList.remove('display-none');
-  // body.classList.add('stop-scrolling');
-  // blur.classList.add('blur');
 });
 
 exitBtn.addEventListener('click', (event) => {
@@ -215,6 +212,16 @@ const frameworksLi = document.getElementById('frameworks-li');
 
 toggleFrameworksButton.addEventListener('click', () => {
   frameworksLi.classList.toggle('appear');
+}, false)
+// Toggle skills
+
+const toggleSkillsButton = document.getElementById('toggle-skills'); 
+
+const skillsLi = document.getElementById('skills-li');
+
+
+toggleSkillsButton.addEventListener('click', () => {
+  skillsLi.classList.toggle('appear');
 }, false)
 
 //animations 
